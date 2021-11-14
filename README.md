@@ -1,20 +1,9 @@
 # MTTimePicker
-
-[![CI Status](https://img.shields.io/travis/Tom.Liu/MTTimePicker.svg?style=flat)](https://travis-ci.org/Tom.Liu/MTTimePicker)
-[![Version](https://img.shields.io/cocoapods/v/MTTimePicker.svg?style=flat)](https://cocoapods.org/pods/MTTimePicker)
-[![License](https://img.shields.io/cocoapods/l/MTTimePicker.svg?style=flat)](https://cocoapods.org/pods/MTTimePicker)
-[![Platform](https://img.shields.io/cocoapods/p/MTTimePicker.svg?style=flat)](https://cocoapods.org/pods/MTTimePicker)
-
+ 
 ## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
+ ![demo](https://github.com/lyleLH/MTTimePicker/blob/master/%E5%B1%8F%E5%B9%95%E5%BD%95%E5%88%B62021-11-14%20%E4%B8%8B%E5%8D%884.12.29.gif)
 ## Installation
-
-MTTimePicker is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+ 
 
 ```ruby
 pod 'MTTimePicker'
