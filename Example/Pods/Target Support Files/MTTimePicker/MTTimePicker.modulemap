@@ -1,0 +1,6 @@
+framework module MTTimePicker {
+  umbrella header "MTTimePicker-umbrella.h"
+
+  export *
+  module * { export * }
+}

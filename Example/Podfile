@@ -1,10 +1,12 @@
 use_frameworks!
-
+source 'https://github.com/lyleLH/MTSpecs.git'
+source 'https://cdn.cocoapods.org/'                  #官方仓库地址 cdn
+ 
 platform :ios, '9.0'
 
 target 'MTTimePicker_Example' do
   pod 'MTTimePicker', :path => '../'
-
+  pod 'LookinServer', :configurations => ['Debug']
   target 'MTTimePicker_Tests' do
     inherit! :search_paths
 

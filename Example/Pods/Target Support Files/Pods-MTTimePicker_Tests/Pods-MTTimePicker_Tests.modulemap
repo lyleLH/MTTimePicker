@@ -1,0 +1,6 @@
+framework module Pods_MTTimePicker_Tests {
+  umbrella header "Pods-MTTimePicker_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

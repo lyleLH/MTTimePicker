@@ -6,24 +6,43 @@
 //  Copyright (c) 2021 Tom.Liu. All rights reserved.
 //
 
-#import "MTViewController.h"
+#define kScreenSize [UIScreen mainScreen].bounds.size
 
+
+#import "MTViewController.h"
+#import <MTTimePicker/MTTimeSetView.h>
 @interface MTViewController ()
 
 @end
 
 @implementation MTViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    CGFloat width = self.view.frame.size.width;
+    CGFloat height = 350;
+    CGFloat originX = (kScreenSize.width - width)*0.5;
+    CGFloat originY = (kScreenSize.height - height)*0.5;
+    MTTimeSetView * timeSetView =[[MTTimeSetView alloc] initWithFrame:CGRectMake(originX, originY, width, height)];
+    timeSetView.delegate = self;
+    [self.view addSubview:timeSetView];
+    
+ 
+}
+ 
+- (void)confirmStartDate:(NSDate *)date showTime:(NSString *)showTime {
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    [fmt setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+        NSLog(@"最早时间:%@,%@",[fmt stringFromDate:date],showTime);
+
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)confirmEndDate:(NSDate *)date showTime:(NSString *)showTime {
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    [fmt setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+        NSLog(@"最晚时间:%@,%@",[fmt stringFromDate:date],showTime);
 }
 
 @end

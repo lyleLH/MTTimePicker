@@ -1,0 +1,23 @@
+PODS:
+  - LookinServer (1.0.4)
+  - MTTimePicker (0.1.0)
+
+DEPENDENCIES:
+  - LookinServer
+  - MTTimePicker (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - LookinServer
+
+EXTERNAL SOURCES:
+  MTTimePicker:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LookinServer: 743c1681771d0a8dcc38825325a080c3186404a5
+  MTTimePicker: d2f8e35a37b18562cfae9f277b3235822e21760b
+
+PODFILE CHECKSUM: ae05bdd1b0e57d1e84a375a56900ea61a355c7df
+
+COCOAPODS: 1.11.2

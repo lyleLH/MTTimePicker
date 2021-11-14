@@ -1,0 +1,6 @@
+framework module Pods_MTTimePicker_Example {
+  umbrella header "Pods-MTTimePicker_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
