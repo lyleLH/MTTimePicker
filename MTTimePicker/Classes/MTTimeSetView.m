@@ -7,7 +7,7 @@
 //
 
 #import "MTTimeSetView.h"
-
+#import "MTSeatCountView.h"
 @interface MTTimeSetView ()
 @property (nonatomic,strong)UIScrollView * scrolleView;
 @property (nonatomic,strong)MTTimePickView * timeView1;
@@ -87,6 +87,13 @@
     [endView addSubview:button3];
     
     [self.scrolleView addSubview:endView];
+    
+    
+    MTSeatCountView* seatView = [[MTSeatCountView alloc ] init];
+    [seatView setFrame:CGRectMake(2*self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
+    [self.scrolleView addSubview:seatView];
+    
+    
 }
 
 - (void)confirmStartTime {
@@ -101,6 +108,7 @@
 }
 
 - (void)confirmEndTime {
+    [self.scrolleView setContentOffset:CGPointMake(2*self.frame.size.width, 0) animated:YES];
     if([self.delegate respondsToSelector:@selector(confirmStartDate:showTime:)]){
         [self.delegate confirmStartDate:self.date2 showTime:self.timeString2];
     }
@@ -122,7 +130,7 @@
         UIScrollView * scrolleView = [[UIScrollView alloc] init];
 //        scrolleView.backgroundColor = [UIColor linkColor];
         scrolleView.scrollEnabled = YES;
-        scrolleView.contentSize = CGSizeMake(scrolleView.bounds.size.width*2, scrolleView.bounds.size.height);
+        scrolleView.contentSize = CGSizeMake(scrolleView.bounds.size.width*3, scrolleView.bounds.size.height);
         scrolleView.delegate = self;
         scrolleView.pagingEnabled = YES;
         scrolleView.showsHorizontalScrollIndicator = NO;

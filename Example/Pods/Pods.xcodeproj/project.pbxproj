@@ -134,6 +134,10 @@
 		C73D35A850F768BE868E41E7AD844523 /* LKS_PerspectiveItemLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 732B4E08E4336DA1A647DF3AD2E1AB9E /* LKS_PerspectiveItemLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C87D5840DC737FCEEABD2E580446754F /* LookinAttrIdentifiers.h in Headers */ = {isa = PBXBuildFile; fileRef = B2DD789428C00581936DC002CD8D44D7 /* LookinAttrIdentifiers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C890D2D918E1A0CC3AED8AB459CA3BD0 /* LKS_AttrModificationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A4E4B0D4EB409D7400FC4D2437AC80 /* LKS_AttrModificationHandler.m */; };
+		C8A8C5F32745F59100D364E0 /* MTSeatCountView.h in Headers */ = {isa = PBXBuildFile; fileRef = C8A8C5F12745F59100D364E0 /* MTSeatCountView.h */; };
+		C8A8C5F42745F59100D364E0 /* MTSeatCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A8C5F22745F59100D364E0 /* MTSeatCountView.m */; };
+		C8A8C5F82746022F00D364E0 /* MTSeatCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C8A8C5F52746022F00D364E0 /* MTSeatCell.h */; };
+		C8A8C5F92746022F00D364E0 /* MTSeatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A8C5F62746022F00D364E0 /* MTSeatCell.m */; };
 		C8F61C603EF3C44A2B4D6BFB6F7B90CB /* NSString+Lookin.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F8059733A05D54C4C73C56A890F7AF /* NSString+Lookin.m */; };
 		CCDC189153B6106E4537F2BB6B0452C9 /* UIVisualEffectView+LookinServer.h in Headers */ = {isa = PBXBuildFile; fileRef = FDD4B2F18890BBDB8B674681F900B0FA /* UIVisualEffectView+LookinServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D494323B44A92BCB8C725C7E0FEA3EE9 /* LookinTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 305A1F2A6CE72DC120623093AAE22848 /* LookinTuple.m */; };
@@ -250,7 +254,7 @@
 		4BEF7669F61A224ACE160917E3EDA028 /* LKS_PerspectiveLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LKS_PerspectiveLayer.h; path = Src/Server/Perspective/LKS_PerspectiveLayer.h; sourceTree = "<group>"; };
 		4DCF54EB26CB44D16CFC7F1096F2EA3A /* LKS_LocalInspectPanelLabelView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LKS_LocalInspectPanelLabelView.m; path = Src/Server/Inspect/LKS_LocalInspectPanelLabelView.m; sourceTree = "<group>"; };
 		4E1289907E798C2417A274A1C9598203 /* UIViewController+LookinServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+LookinServer.h"; path = "Src/Server/Category/UIViewController+LookinServer.h"; sourceTree = "<group>"; };
-		4F9E5F699A48356833C7460FCF20C710 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		4F9E5F699A48356833C7460FCF20C710 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		5110DAD58082DADC7FC4242B23B91E60 /* LKS_HierarchyDisplayItemsMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LKS_HierarchyDisplayItemsMaker.h; path = Src/Server/Others/LKS_HierarchyDisplayItemsMaker.h; sourceTree = "<group>"; };
 		51B6993A42B0BA30DFF0C7AB7FD809EA /* MTTimePicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MTTimePicker-Info.plist"; sourceTree = "<group>"; };
 		51C92FA0AE5C4B3A918AC8FBCC2B06E6 /* LookinTuple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LookinTuple.h; path = Src/Shared/LookinTuple.h; sourceTree = "<group>"; };
@@ -300,7 +304,7 @@
 		981C056B9F8B125BF9773F2B717EF770 /* LKS_PerspectiveHierarchyCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LKS_PerspectiveHierarchyCell.m; path = Src/Server/Perspective/LKS_PerspectiveHierarchyCell.m; sourceTree = "<group>"; };
 		98F149A7343A4830FE050E29849A42CA /* MTTimeSetView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTTimeSetView.m; path = MTTimePicker/Classes/MTTimeSetView.m; sourceTree = "<group>"; };
 		9D090BF0CEB3FCF6153AB9E3839F4997 /* UIImageView+LookinServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+LookinServer.h"; path = "Src/Server/Category/UIImageView+LookinServer.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E100F08D134BD9F236C1DB563B5C32A /* LookinAppInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LookinAppInfo.h; path = Src/Shared/LookinAppInfo.h; sourceTree = "<group>"; };
 		9EB0BEBA7D84A0C40060028639D78B2E /* UITextField+LookinServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+LookinServer.h"; path = "Src/Server/Category/UITextField+LookinServer.h"; sourceTree = "<group>"; };
 		9FC9F9FAD452B2EF7C0BF9C2F88F9809 /* MTTimePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MTTimePicker.modulemap; sourceTree = "<group>"; };
@@ -351,6 +355,10 @@
 		C37AA522D3810B8DB8D6ADBCD41AAE72 /* LookinServer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LookinServer-umbrella.h"; sourceTree = "<group>"; };
 		C437381800BD222B5086E91C4BCA3BDE /* LKS_PerspectiveHierarchyView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LKS_PerspectiveHierarchyView.m; path = Src/Server/Perspective/LKS_PerspectiveHierarchyView.m; sourceTree = "<group>"; };
 		C5E02839B612579B09CFE8A95C286955 /* LookinDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LookinDefines.h; path = Src/Shared/LookinDefines.h; sourceTree = "<group>"; };
+		C8A8C5F12745F59100D364E0 /* MTSeatCountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MTSeatCountView.h; path = MTTimePicker/Classes/MTSeatCountView.h; sourceTree = "<group>"; };
+		C8A8C5F22745F59100D364E0 /* MTSeatCountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MTSeatCountView.m; path = MTTimePicker/Classes/MTSeatCountView.m; sourceTree = "<group>"; };
+		C8A8C5F52746022F00D364E0 /* MTSeatCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MTSeatCell.h; path = MTTimePicker/Classes/MTSeatCell.h; sourceTree = "<group>"; };
+		C8A8C5F62746022F00D364E0 /* MTSeatCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MTSeatCell.m; path = MTTimePicker/Classes/MTSeatCell.m; sourceTree = "<group>"; };
 		CB5C00E18DBF032BB20776ADAEF182DC /* LKS_LocalInspectPanelLabelView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LKS_LocalInspectPanelLabelView.h; path = Src/Server/Inspect/LKS_LocalInspectPanelLabelView.h; sourceTree = "<group>"; };
 		CD0022303BC1F2A9A67D786E87DB3398 /* UIViewController+LookinServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+LookinServer.m"; path = "Src/Server/Category/UIViewController+LookinServer.m"; sourceTree = "<group>"; };
 		CD5C018B5D807D4D5938C384B30FCAB8 /* LookinServer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LookinServer-prefix.pch"; sourceTree = "<group>"; };
@@ -376,14 +384,14 @@
 		E7DFF0D3DFCAE8E5599FCC61CCA49DE1 /* PTProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTProtocol.h; path = Src/Shared/Peertalk/PTProtocol.h; sourceTree = "<group>"; };
 		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		ECFCA44A88D5A624B8730B3C86D878AD /* MTTimePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MTTimePicker-prefix.pch"; sourceTree = "<group>"; };
-		EE485828D9DCB65200DE432CE8F8498A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		EE485828D9DCB65200DE432CE8F8498A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F0921F2A47CEC14A2DE268BD346572BF /* LKS_LocalInspectViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LKS_LocalInspectViewController.h; path = Src/Server/Inspect/LKS_LocalInspectViewController.h; sourceTree = "<group>"; };
 		F2D437EAAE450FDC984403C2DB226243 /* Pods-MTTimePicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MTTimePicker_Example-umbrella.h"; sourceTree = "<group>"; };
 		F38F692FA417007C2359C6213001EA3B /* LookinConnectionResponseAttachment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LookinConnectionResponseAttachment.h; path = Src/Shared/LookinConnectionResponseAttachment.h; sourceTree = "<group>"; };
 		F3E04239371425A0CCAE4280A8E90FC5 /* LKS_LocalInspectManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LKS_LocalInspectManager.h; path = Src/Server/Inspect/LKS_LocalInspectManager.h; sourceTree = "<group>"; };
 		F4F8059733A05D54C4C73C56A890F7AF /* NSString+Lookin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Lookin.m"; path = "Src/Shared/Category/NSString+Lookin.m"; sourceTree = "<group>"; };
 		F61777135842036F0089974F065F58AF /* LookinWeakContainer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LookinWeakContainer.m; path = Src/Shared/LookinWeakContainer.m; sourceTree = "<group>"; };
-		F78FE128C7910416B1704898ABB2362F /* MTTimePicker.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MTTimePicker.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F78FE128C7910416B1704898ABB2362F /* MTTimePicker.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = MTTimePicker.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FA16599512F3F31DC7DB080090F6092E /* LKS_ExportManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LKS_ExportManager.h; path = Src/Server/Others/LKS_ExportManager.h; sourceTree = "<group>"; };
 		FAF05EDC4A7B510C26BF7062E98DC802 /* LKS_Helper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LKS_Helper.h; path = Src/Server/Others/LKS_Helper.h; sourceTree = "<group>"; };
 		FB4044D05368D93A141AB2F8234088E8 /* LookinServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LookinServer.h; path = Src/Server/LookinServer.h; sourceTree = "<group>"; };
@@ -535,6 +543,10 @@
 				72A0C3527079FC072E360E4A8BE7DC74 /* ZGPickerView.m */,
 				9DEEC0CE42F924AF7B4A2BA2F6604990 /* Pod */,
 				F685129CD937E53166A6C58454CD5D2F /* Support Files */,
+				C8A8C5F12745F59100D364E0 /* MTSeatCountView.h */,
+				C8A8C5F22745F59100D364E0 /* MTSeatCountView.m */,
+				C8A8C5F52746022F00D364E0 /* MTSeatCell.h */,
+				C8A8C5F62746022F00D364E0 /* MTSeatCell.m */,
 			);
 			name = MTTimePicker;
 			path = ../..;
@@ -701,7 +713,6 @@
 				B3918A542CF858869C1FF2FAEF67F7B9 /* UIVisualEffectView+LookinServer.m */,
 				85E495EC2CA9BE72C03CFD9A43325BEA /* Support Files */,
 			);
-			name = LookinServer;
 			path = LookinServer;
 			sourceTree = "<group>";
 		};
@@ -840,9 +851,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8A8C5F82746022F00D364E0 /* MTSeatCell.h in Headers */,
 				B4992EC8A745E8DFE9394518778D6C07 /* MTTimePicker-umbrella.h in Headers */,
 				D4CA8F94AFFCB3C662E0E6045CF1DD39 /* MTTimePickView.h in Headers */,
 				FEC89422504BE3611B22CA50698F27CD /* MTTimeSetView.h in Headers */,
+				C8A8C5F32745F59100D364E0 /* MTSeatCountView.h in Headers */,
 				2D534F7A9CD48925FF86DBC8F6B957CD /* ZGPickerView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1085,8 +1098,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9677EAC99A9AA99E81CD2C342706A43C /* MTTimePicker-dummy.m in Sources */,
+				C8A8C5F92746022F00D364E0 /* MTSeatCell.m in Sources */,
 				C1DA10DD934C4B1F3F3FF8FBF56FA78B /* MTTimePickView.m in Sources */,
 				E1A40F274D1CD331EB7A3E569F184CB9 /* MTTimeSetView.m in Sources */,
+				C8A8C5F42745F59100D364E0 /* MTSeatCountView.m in Sources */,
 				0DB9EA1F0E0665BA85EE1ACBE0061D33 /* ZGPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1402,8 +1417,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
