@@ -9,7 +9,7 @@
 #import "MTSeatCell.h"
 @interface MTSeatCountView ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong)UICollectionView * seatCountView;
-
+@property (nonatomic,assign)NSInteger seatCount;
 @end
 
 @implementation MTSeatCountView
@@ -21,21 +21,40 @@
  // Drawing code
  }
  */
+- (NSInteger)seatCount {
+    if(!_seatCount) {
+        _seatCount  = 1;
+    }
+    return _seatCount;
+}
 
 - (void)layoutSubviews{
     [super layoutSubviews];
     
     UILabel * titleLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(30, 0, self.frame.size.width, 35)];
-    titleLabel2.text = @"请选择最晚出发时间";
+    titleLabel2.text = @"请选择乘车人数";
     titleLabel2.font = [UIFont boldSystemFontOfSize:22];
     [self addSubview:titleLabel2];
-    
-    
-    
     [self.seatCountView setFrame: CGRectMake(0, 50, self.frame.size.width, 180)];
-
     [self addSubview:self.seatCountView];
  
+    dispatch_block_t descBlock = ^(){
+        UILabel *label = [[UILabel alloc] init];
+        label.frame = CGRectMake(30,45,self.frame.size.width,20);
+        label.numberOfLines = 0;
+  
+
+        NSMutableAttributedString *string = [[NSMutableAttributedString alloc]
+                                             initWithString:@"若有婴幼儿，需计入乘车人数"
+                                             attributes:@{NSFontAttributeName: [UIFont fontWithName:@"PingFang SC" size: 14],NSForegroundColorAttributeName: [UIColor colorWithRed:140/255.0 green:145/255.0 blue:152/255.0 alpha:1.0]}];
+
+        label.attributedText = string;
+        label.textColor = [UIColor colorWithRed:140/255.0 green:145/255.0 blue:152/255.0 alpha:1.0];
+        label.alpha = 1.0;
+        [self addSubview:label];
+    };
+    
+    descBlock();
     
     UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
     button2.frame = CGRectMake(15,CGRectGetMaxY(self.seatCountView.frame)+20,115,54);
@@ -58,11 +77,15 @@
 }
  
 - (void)backToSetTime {
-    
+    if([self.delegate respondsToSelector:@selector(backToTimeSetting)]){
+        [self.delegate backToTimeSetting];
+    }
 }
 
 - (void)confirmSeatCount {
-    
+    if([self.delegate respondsToSelector:@selector(confirmSeatNumber:)]){
+        [self.delegate confirmSeatNumber:self.seatCount];
+    }
 }
 
 
@@ -74,12 +97,48 @@
     return 6;
 }
 
+
+/**
+ cell的大小
+ */
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    CGFloat itemW = ([UIScreen mainScreen].bounds.size.width -60 -20)/3.0;
+    return CGSizeMake(itemW, 40);
+}
+
+/**
+ 每个分区的内边距（上左下右）
+ */
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    return UIEdgeInsetsMake(40, 30, 40, 30);
+}
+
+/**
+ 分区内cell之间的最小行间距
+ */
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
+    return 10;
+}
+
+/**
+ 分区内cell之间的最小列间距
+ */
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
+    return 10;
+}
+
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     MTSeatCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"kMTSeatCell" forIndexPath:indexPath];
-    cell.countLabel.text = [NSString stringWithFormat:@"%ld人",(long)indexPath.item];
-    
+    cell.countLabel.text = [NSString stringWithFormat:@"%ld人",(long)(indexPath.item+1)];
     return cell;
 }
+
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    self.seatCount = indexPath.row +1;
+}
+
 
 - (UICollectionView *)seatCountView   {
     if(!_seatCountView){
@@ -89,9 +148,9 @@
         [seatCountView registerClass:[MTSeatCell class] forCellWithReuseIdentifier:@"kMTSeatCell"];
         seatCountView.delegate = self;
         seatCountView.dataSource = self;
-        
-        
     }
     return _seatCountView;
 }
+
+
 @end

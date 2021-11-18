@@ -7,9 +7,21 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol MTSeatCountViewProtocol<NSObject>
+
+- (void)confirmSeatNumber:(NSInteger)count;
+
+- (void)cancleSeatChoose;
+
+- (void)backToTimeSetting;
+
+@end
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MTSeatCountView : UIView
+
+@property (nonatomic,weak) id <MTSeatCountViewProtocol> delegate;
 
 @end
 

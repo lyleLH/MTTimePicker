@@ -10,6 +10,9 @@
 #endif
 #endif
 
+#import "MTSeatCell.h"
+#import "MTSeatCountView.h"
+#import "MTTimePicker.h"
 #import "MTTimePickView.h"
 #import "MTTimeSetView.h"
 #import "ZGPickerView.h"

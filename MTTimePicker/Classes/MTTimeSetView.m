@@ -8,7 +8,7 @@
 
 #import "MTTimeSetView.h"
 #import "MTSeatCountView.h"
-@interface MTTimeSetView ()
+@interface MTTimeSetView () <MTSeatCountViewProtocol>
 @property (nonatomic,strong)UIScrollView * scrolleView;
 @property (nonatomic,strong)MTTimePickView * timeView1;
 @property (nonatomic,strong)MTTimePickView * timeView2;
@@ -91,10 +91,28 @@
     
     MTSeatCountView* seatView = [[MTSeatCountView alloc ] init];
     [seatView setFrame:CGRectMake(2*self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
+    seatView.delegate = self;
     [self.scrolleView addSubview:seatView];
     
     
 }
+
+- (void)backToTimeSetting {
+    [self.scrolleView setContentOffset:CGPointMake(self.frame.size.width, 0) animated:YES];
+    if([self.delegate respondsToSelector:@selector(backToTimeSetting)]) {
+        [self.delegate backToTimeSetting];
+    }
+    
+}
+
+
+- (void)confirmSeatNumber:(NSInteger)count {
+    
+    if([self.delegate respondsToSelector:@selector(confirmSeatNumber:)]){
+        [self.delegate confirmSeatNumber:count];
+    }
+}
+
 
 - (void)confirmStartTime {
     [self.scrolleView setContentOffset:CGPointMake(self.frame.size.width, 0) animated:YES];
@@ -137,8 +155,6 @@
         scrolleView.scrollEnabled = NO;
         _scrolleView = scrolleView;
         [self setUpTimePickView];
-        
-        
     }
     return _scrolleView;
 }

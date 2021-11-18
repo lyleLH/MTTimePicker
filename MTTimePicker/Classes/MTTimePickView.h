@@ -18,7 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface MTTimePickView : UIView
+
 @property (nonatomic,weak)id <MTTimePickViewDelegate>delegate;
+
 @end
 
 NS_ASSUME_NONNULL_END

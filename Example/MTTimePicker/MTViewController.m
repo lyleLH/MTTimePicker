@@ -11,7 +11,7 @@
 
 #import "MTViewController.h"
 #import <MTTimePicker/MTTimeSetView.h>
-@interface MTViewController ()
+@interface MTViewController () <MTTimeSetViewDelegate>
 
 @end
 
@@ -43,6 +43,15 @@
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
     [fmt setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
         NSLog(@"最晚时间:%@,%@",[fmt stringFromDate:date],showTime);
+}
+
+- (void)cancleSeatChoose {
+    
+}
+
+- (void)confirmSeatNumber:(NSInteger)count {
+    
+    
 }
 
 @end
