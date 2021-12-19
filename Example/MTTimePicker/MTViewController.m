@@ -51,7 +51,7 @@
 
 - (void)confirmSeatNumber:(NSInteger)count {
     
-    
+    NSLog(@"当前选中的人数 %ld",count);
 }
 
 @end

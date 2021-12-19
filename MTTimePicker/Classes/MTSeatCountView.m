@@ -37,7 +37,7 @@
     [self addSubview:titleLabel2];
     [self.seatCountView setFrame: CGRectMake(0, 50, self.frame.size.width, 180)];
     [self addSubview:self.seatCountView];
- 
+    [self.seatCountView selectItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UICollectionViewScrollPositionNone];
     dispatch_block_t descBlock = ^(){
         UILabel *label = [[UILabel alloc] init];
         label.frame = CGRectMake(30,45,self.frame.size.width,20);
